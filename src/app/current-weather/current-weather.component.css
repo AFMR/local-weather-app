@@ -1,3 +1,19 @@
-.trial{
-    font-size: 25px;
+.info{
+    padding: 4em, 2em;
+}
+
+.location{
+    font-size: 4em;
+}
+
+.date{
+    font-size: 3em;
+}
+
+.temperature{
+    font-size: 5em;
+}
+
+.description{
+    font-size: 3em;
 }

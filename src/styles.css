@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Lobster Two', cursive, sans-serif;
+    background-color: pink; /* For browsers that do not support gradients */
+    background-image: linear-gradient(pink, purple); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: whitesmoke;
+}
