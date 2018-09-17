@@ -1,7 +1,21 @@
 <form>
-  <mat-form-field>
-    <mat-icon matPrefix>Search</mat-icon>
+    <mat-form-field id="mat">
+       <mat-icon matPrefix>search</mat-icon>
+       <input matInput placeholder="Enter city or zip" aria-label="City or Zip" 
+        [formControl]="search">
+      <mat-hint id="hint">Specify country code like 'California, US'</mat-hint>
+  
+      <mat-error *ngIf="search.invalid">
+        {{getErrorMessage()}}
+      </mat-error>
+    </mat-form-field>
+  </form>
+
+<!--  <p>Enter a city or zip code</p>
+
+<form>
     <input matInput placeholder="Enter city or zip" aria-label="City or Zip" [formControl]="Search">
-    <mat-hint>Specify country code like 'Seattle, US'</mat-hint>
-  </mat-form-field>
-</form>
+    <button class="search-button"><i class="fa fa-search"></i></button>
+    <mat-hint>Specify country code like 'California, US'</mat-hint>
+    <mat-error *ngIf="search.invalid">{{getErrorMessage()}}</mat-error>
+</form> -->

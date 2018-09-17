@@ -1,8 +1,13 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Local weather
-  </h1>
-  <app-city-search></app-city-search>
-  <app-current-weather></app-current-weather>
+ 
+      <h1>Local Weather</h1>
+    
+     <div id="slogan">Your city, your forecast, right now!</div>
+     <div fxLayoutAlign="center">
+      <app-city-search (searchEvent)="doSearch($event)"></app-city-search>
+    </div>
+    
+      <h2>Current Weather</h2>
+      <app-current-weather [current]="currentWeather" ></app-current-weather>
+    
 </div>
