@@ -12,7 +12,7 @@ export class WeatherServiceFake implements IWeatherService{
         description: 'sunny'
     }
 
-    public getCurrentWeather(city: string, country: string): 
+    public getCurrentWeather(search: string | number, country?: string): 
     Observable<ICurrentWeather>{
         return of(this.fakeWeather);
     }
