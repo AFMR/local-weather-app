@@ -8,7 +8,7 @@ import { WeatherService } from './weather/weather.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CitySearchComponent } from './city-search/city-search.component';
 import { MatInputModule, MatFormFieldModule, MatIconModule, MatButtonModule, MatToolbarModule, MatCardModule} from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -28,7 +28,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
     MatButtonModule,
     MatToolbarModule,
     MatCardModule
-
   ],
   exports:[
     MatFormFieldModule,

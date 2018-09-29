@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { WeatherService } from './weather/weather.service';
 import { ICurrentWeather } from './icurrent-weather';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

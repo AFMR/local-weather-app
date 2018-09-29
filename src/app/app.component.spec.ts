@@ -1,14 +1,34 @@
 import { TestBed, async } from '@angular/core/testing';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { CurrentWeatherComponent } from './current-weather/current-weather.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CitySearchComponent } from './city-search/city-search.component';
+import { MatInputModule, MatFormFieldModule, MatIconModule, MatButtonModule, MatToolbarModule, MatCardModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
+      imports: [
+        BrowserModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatCardModule
+      ],
       declarations: [
         AppComponent,
-        CurrentWeatherComponent
+        CurrentWeatherComponent,
+        CitySearchComponent
       ],
     }).compileComponents();
   }));
@@ -21,6 +41,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Local weather');
+    expect(compiled.querySelector('h1').textContent).toContain('Local Weather');
   }));
 });
